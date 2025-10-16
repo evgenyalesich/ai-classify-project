@@ -1,0 +1,77 @@
+.aurora {
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.3;
+    animation: floaty 10s ease-in-out infinite alternate;
+}
+
+.aurora-cyan {
+    background: radial-gradient(
+        circle at 30% 30%,
+        rgba(0, 255, 255, 0.3),
+        transparent 70%
+    );
+    top: -10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.aurora-pink {
+    background: radial-gradient(
+        circle at 70% 70%,
+        rgba(255, 0, 255, 0.25),
+        transparent 70%
+    );
+    bottom: -10%;
+    right: -10%;
+    animation-delay: 3s;
+}
+
+@keyframes floaty {
+    from {
+        transform: translate(0px, 0px) scale(1);
+    }
+    to {
+        transform: translate(50px, -50px) scale(1.1);
+    }
+}
+
+.glow-box {
+    box-shadow:
+        0 0 25px rgba(0, 255, 255, 0.2),
+        inset 0 0 15px rgba(0, 255, 255, 0.1);
+    transition: box-shadow 0.4s ease-in-out;
+}
+.glow-box:hover {
+    box-shadow:
+        0 0 40px rgba(255, 0, 255, 0.25),
+        inset 0 0 25px rgba(0, 255, 255, 0.15);
+}
+
+@keyframes gradient-move {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-move 6s ease infinite;
+}
+.aurora {
+    pointer-events: none;
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.3;
+    animation: floaty 10s ease-in-out infinite alternate;
+    z-index: 0;
+}
